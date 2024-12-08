@@ -1,0 +1,15 @@
+{% extends "app/base.html" %}
+{% load static %}
+{% block title %}Deletar produto{% endblock title %}
+{% block content %}
+<h1 class="text-secondary mt-3">Deletar Produto</h1>
+<section class="row justify-content-center">
+    <h2>Voce realmente deseja deletar esse produto?</h2>
+    <form action="" method="post" class="mt-4" id="form">
+        {% csrf_token %}
+        <div class="mb-4 d-flex justify-content-end">
+            <button type="submit" class="btn btn-lg btn-primary">Deletar</button>
+        </div>
+    </form>
+</section>
+{% endblock content %}
