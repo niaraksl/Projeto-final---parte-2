@@ -1,27 +1,82 @@
-{% extends "app/base.html" %}
+{% extends "app/base1.html" %}
 {% load static %}
-{% block title %}Pagina inicial{% endblock title %}
+{% block title %}Pagina home{% endblock title %}
+{% block styles %}{% endblock styles %}
 {% block content %}
-<a href="{% url "app:produto_create" %}" class="btn btn-success my-3">Inserir um produto</a>
-<table class="table">
-  <thead>
-    <tr>
-      <th scope="col">#</th>
-      <th scope="col">Nome do Produto</th>
-      <th scope="col">Ações</th>
-    </tr>
-  </thead>
-  <tbody>
-    {% for produto in produtos %}
-      <tr>
-        <th scope="row">{{ produto.id }}</th>
-        <td>{{ produto.nome_produto }}</td>
-        <td>
-          <a href="{% url "app:produto_update" produto.id %}" class="btn btn-success">Atualizar</a>
-          <a href="{% url "app:produto_delete" produto.id %}" class="btn btn-danger">Apagar</a>
-        </td>
-      </tr>
-    {% endfor %}
-  </tbody>
-</table>
+<div>
+    <img id="imagem_group" src="{% static "img/home/hero_home.png" %}" alt="Imagem">
+</div>
+<div class="cta cta__about">
+    <h2 class="section__title">
+        Conheça a nossa comunidade
+    </h2>
+    <p class="section__body">
+        Este projeto tem como objetivo aprimorar a qualidade de vida e a autonomia de famílias que vivem no ramo
+        da agricultura, com intuito de implementarmos as tecnologias sociais para impulsionar a geração de
+        renda, a segurança alimentar e a preservação do ambiente.
+    </p>
+    <a href="{% url "app:second_visit" %}" class="btn btn-success">
+        <button class="btn btn-success">
+            Saiba mais >
+        </button>
+    </a>
+</div>
+<div class="container__image">
+    <img class="img_group" src="{% static "img/home/image1.png" %}" alt="Visita] ao sitio">
+</div>
+<div class="section__divider"></div>
+<section class="content">
+    <div class="content__item">
+        <div class="content__left">
+            <h3 class="section__title">
+                O que é a AGROECOLOGIA?
+            </h3>
+            <p class="section__body">
+                A agroecologia é uma abordagem de agricultura sustentável, buscando produzir alimentos de
+                maneira mais
+                equilibrada e em sintonia com o meio ambiente. Ela engloba práticas agrícolas que não apenas
+                consideram aspectos ambientais,
+                mas também questões sociais, políticas, culturais, energéticas e éticas, dando ênfase à
+                agricultura familiar e integrando todos esses elementos para promover sistemas agrícolas mais
+                completos e responsáveis.
+            </p>
+        </div>
+        <div class="content__rigth">
+            <img src="{% static "img/home/campo.png" %}" alt="Campo arado">
+        </div>
+    </div>
+    <div class="content__item" style="margin-top: 6rem">
+        <div class="content__left">
+            <h3 class="section__title">
+                Quais os benefícios da AGROECOLOGIA?
+            </h3>
+            <p class="section__body">
+                A agroeocologia oferece benefícios como a melhoria da qualidade do solo, redução da dependência
+                de insumos químicos e a pratíca de agrícolas socialmente justas.
+            </p>
+        </div>
+        <div class="content__rigth">
+            <h3 class="section__title">
+                Como funciona a AGROECOLOGIA?
+            </h3>
+            <p class="section__body">
+                A Agroecologia é o estudo da agricultura com base em uma perspectiva de vida melhor. É
+                concentrada em criar um sistema mais sustentável promovendo o uso da natureza com mais
+                responsabilidade.
+            </p>
+        </div>
+    </div>
+</section>
+<section>
+    <div class="cta">
+        <h3 class="section__title" style="text-align: center;">
+            Nossa visita à um dos agricultores agroecológicos da Central de Associações Serra do Camará
+        </h3>
+        <a href="{% url "app:visit" %}">
+            <button class="btn btn-success" style="margin-top: 5rem;">
+                Saiba mais >
+            </button>
+        </a>
+    </div>
+</section>
 {% endblock content %}

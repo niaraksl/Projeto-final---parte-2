@@ -1,0 +1,220 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EcoTerra - Login</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="{% static "css\base.css" %}">
+    <link rel="stylesheet" href="{% static "css\style_visit.css" %}">
+
+    <!-- FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <style>
+        .login__container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #FEF0A5;
+        }
+
+        .login__wrapper {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            width: 100%;
+            height: 100%;
+        }
+
+        .login__left {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 0 2rem;
+            position: relative;
+        }
+
+        .login__card {
+            width: 100%;
+            max-width: 524px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-color: #fff;
+            border-radius: 10px;
+            padding: 4rem;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .login__title {
+            font-size: 1.2rem;
+            font-weight: 700;
+            margin-bottom: 2rem;
+        }
+
+        .login__form {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+        }
+
+        .login__form-item {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+            width: 100%;
+            margin-bottom: 1rem;
+        }
+
+        .login__form-item label {
+            font-size: 1rem;
+            font-weight: 500;
+            margin-bottom: 0.5rem;
+        }
+
+        .login__form-item input {
+            width: 100%;
+            height: 2rem;
+            border-radius: 50px;
+            border: 1px solid #11644D;
+            padding: 0 0.5rem;
+            font-size: 0.8rem;
+            font-weight: 500;
+        }
+
+        .login__form-item input:focus {
+            outline: none;
+        }
+
+        .login__form-item input::placeholder {
+            font-size: 0.8rem;
+            font-weight: 500;
+            color: #A3A3A3;
+        }
+
+        .login__form__button-submit {
+            width: 100%;
+            height: 2rem;
+            border-radius: 50px;
+            border: none;
+            background-color: #11644D;
+            color: #fff;
+            font-size: 0.8rem;
+            font-weight: 500;
+            cursor: pointer;
+            margin-bottom: 4rem;
+        }
+
+        .login__form__button-submit:hover {
+            background-color: #0F513D;
+        }
+
+        .login__form__social-media {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            margin-top: 1rem;
+        }
+
+        .login__account-register__text {
+            font-size: 0.8rem;
+            font-weight: 500;
+        }
+
+        .login__account-register__text a {
+            color: #11644D;
+            font-weight: 700;
+        }
+
+        .login__rigth {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
+
+        @media (max-width: 768px) {
+            .login__wrapper {
+                grid-template-columns: 1fr;
+            }
+
+            .login__rigth {
+                display: none;
+            }
+
+            .login__left {
+                width: 100%;
+            }
+
+            .login__card {
+                width: 100%;
+                padding: 2rem;
+                max-width: 420px;
+            }
+        }
+
+        @media (max-width: 425px) {
+            .login__card {
+                padding: 1rem;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+    <main class="login__container">
+        <!-- GRID TWO COLUMS -->
+        <div class="login__wrapper">
+            <div class="login__left">
+                <div class="login__card">
+                    <!-- LOGIN TITLE -->
+                    <h1 class="login__title">Bem vindo(a) de volta!</h1>
+                    <!-- LOGIN FORM -->
+                    <form action="" class="login__form">
+                        <div class="login__form-item">
+                            <label for="email">Email:</label>
+                            <input type="email" name="email" id="email" placeholder="laviniaejhonny@gmail.com" required>
+                        </div>
+                        <div class="login__form-item">
+                            <label for="password">Password:</label>
+                            <input type="password" name="password" id="password" placeholder="************" required>
+                        </div>
+                        <button
+                            class="login__form__button-submit"
+                            type="submit">Login</button>
+                        <div>
+                            <span class="login__account-register__text">
+                                Nao tem uma conta? <a href="{% url "app:register" %}">Register</a>
+                            </span>
+                            <div 
+                                class="login__form__social-media" 
+                            >
+                                <img src="{% static "img/login/social_media_icons.png" %}"
+                                    alt="Social media icons image" 
+                                />
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="login__rigth">
+                <img src="{% static "img/login/rectangle_2.png" %}" style="position: absolute; top: 0; margin-left: -210px;">
+                <img src="{% static "img/login/rectangle_1.png" %}" style="position: absolute; top: 0;">
+                <img src="{% static "img/login/login_login.png" %}" alt="" style="position: absolute; top: 0;  right: 0; left: 0; bottom: 0; margin: auto;">
+            </div>
+        </div>
+    </main> 
+</body>

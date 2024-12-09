@@ -1,0 +1,150 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EcoTerra - Home</title>
+
+    <link rel="stylesheet" href="{% static "css/base.css" %}">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+    <style>
+        #imagem_group {
+            width: 100%;
+            height: 100%;
+        }
+
+        .content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto;
+            width: 100%;
+            max-width: 1200px;
+            padding: 0 1rem;
+        }
+
+        .container__image {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin: 5rem auto;
+            width: 100%;
+            max-width: 1200px;
+            padding: 0 1rem;
+        }
+
+        .img_group {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .content__item {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .content__left {
+            display: flex;
+            gap: 1rem;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: center;
+            width: 50%;
+        }
+
+        .content__rigth {
+            display: flex;
+            gap: 1rem;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: 50%;
+        }
+
+        .content__rigth img {
+            width: 100%;
+            height: 100%;
+        }
+
+        .cta {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin: 5rem auto;
+            max-width: 1200px;
+            padding: 0 1rem;
+        }
+
+        .cta__about {
+            align-items: flex-start;
+            gap: 1rem;
+        }
+
+        {% block styles %}{% endblock styles %}
+    </style>
+</head>
+
+<body>
+    <header>
+        <a href="{% url "app:home" %}">
+          <img src="{% static "img\Agriculture Nature Logo 4.png" %}" alt="Logo">
+        </a>
+        <nav class="nav">
+            <ul class="links">
+                <li>
+                    <a class="link text-decoration-none text-success" href="{% url "app:home" %}">Início</a>
+                    <a class="link text-decoration-none text-success" href="{% url "app:produtos_list" %}">Produtos</a>
+                    <a class="link text-decoration-none text-success" href="{% url "app:about" %}">Sobre nós</a>
+                    <a class="link text-decoration-none text-success" href="{% url "app:login" %}">Login</a>
+                    <a class="btn btn-success" href="{% url "app:register" %}">Cadastre-se</a>
+                </li>
+            </ul>
+            <a href="javascript:void(0);" class="menu__icon" onclick="toggleMenu()">
+                <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M1 2.5A.5.5 0 0 1 1.5 2h13a.5.5 0 0 1
+                    .5.5v1a.5.5 0 0 1-.5.5h-13a.5.5 0 0
+                    1-.5-.5v-1zm0 4A.5.5 0 0 1 1.5 6h13a.5.5
+                    0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-13a.5.5
+                    0 0 1-.5-.5v-1zm0 4A.5.5 0 0 1 1.5
+                    10h13a.5.5 0 0 1 .5.5v1a.5.5 0 0
+                    1-.5.5h-13a.5.5 0 0 1-.5-.5v-1z" />
+                </svg>
+            </a>
+        </nav>
+    </header>
+    <main>
+      {% block content %}{% endblock content %}
+    </main>
+    <footer class="section_footer margin__top--40">
+        <div class="social_media">
+            <img class="social_media_logo" src="{% static "img\icons8-facebook-480 1.png" %}" alt="logo facebook">
+            <img class="social_media_logo" src="{% static "img\icons8-gmail-240 1.png" %}" alt="logo gmail">
+            <img class="social_media_logo" src="{% static "img\icons8-instagram-240 1.png" %}" alt="logo instagram">
+        </div>
+        <p class="text_footer"> BR-405 S/N, Pau dos Ferros - RN, 59900-000, Brasil </p>
+        <div id="email" class="text_footer">
+            <div>
+                <img src="{% static "img\icons8-carta-96 1.png" %}" alt="ícone email">
+            </div>
+            <p id="email_text">ecoterra@gmail.com</p>
+        </div>
+        <p id="ecoterra" class="text_footer">© 2024 EcoTerra </p>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+
+</html>

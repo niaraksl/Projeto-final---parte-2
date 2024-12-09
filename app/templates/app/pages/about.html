@@ -1,0 +1,121 @@
+{% extends "app/base1.html" %}
+{% load static %}
+{% block title %}{% endblock title %}
+{% block styles %}
+.grid__about {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.grid__about img {
+    width: 100%;
+    height: 100%;
+}
+
+.grid__about img:nth-child(1) {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+}
+
+.grid__about img:nth-child(2) {
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+}
+
+.grid__about img:nth-child(3) {
+    grid-column: 1 / 3;
+    grid-row: 2 / 3;
+}
+
+.grid__about img:hover {
+    transform: scale(1.1);
+    transition: all 0.3s ease-in-out;
+}
+
+.highlight {
+    color: #2F9D1D;
+    font-weight: 700;
+
+}
+{% endblock styles %}
+{% block content %}
+<div class="margin__bottom--40">
+    <img id="imagem_group" src="{% static "img/aula_de_campo2.png" %}" alt="Imagem">
+</div>
+<section class="content">
+    <div class="content__item">
+        <div class="content__left">
+            <h3 class="section__title">
+                Conheça a <br> história
+                do
+                <span class="highlight">
+                    ECOTERRA
+                </span>
+            </h3>
+            <p class="section__body">
+                O nosso projeto vai além da agroecologia, também trazemos dicas de uma boa qualidade de vida
+                para agricultores
+                que ainda não usam técnica da agroecologia sustentável.
+            </p>
+
+            <div class="section__divider"></div>
+        </div>
+        <div class="content__rigth">
+            <img src="{% static "img/about/image1.png" %}" alt="Grupo">
+        </div>
+    </div>
+    <div class="content__item">
+        <div class="content__left">
+            <div class="grid__about">
+                <img src="{% static "img/about/image3_grid.png" %}" alt="Imagem">
+                <img src="{% static "img/about/image2_grid.png" %}" alt="Imagem">
+                <img src="{% static "img/about/image1_grid.png" %}" alt="Imagem">
+            </div>
+        </div>
+        <div class="content__rigth margin__top--40">
+            <h3 class="section__title">
+                Sobre nós
+            </h3>
+            <p class="section__body">
+                Somos alunas do terceiro ano de informática no Instituto Federal de Educação e Teconologia do
+                Rio Grande do norte (IFRN),
+                campus Pau dos Ferros. Para o nosso projeto buscamos desafios sociais que junto com nosso
+                conhecimento tecnico tivesse relevância.
+                Foi nesse sentido que abordamos a agroecologia, por mais que seja muito importante não tem a
+                atenção que merece.
+                Decidimos unir o útil ao agradavel e desenvolver um projeto significativo, com o objetivo de
+                ampliar esse tema e o entendimento a agroecologia,
+                com isso criamos um site como ferramenta de interatividade e informação.
+            </p>
+
+            <div class="section__divider"></div>
+        </div>
+    </div>
+    <div class="content__item margin__top--40">
+        <div class="content__left">
+            <h3 class="section__title">
+                Nosso Desafio
+            </h3>
+            <p class="section__body">
+                O desafio do nosso site é a descomplicar a compreensão sobre a agroecologia para
+                todos de forma mais acessível. O nosso próposito não seria apenas a divulgação da associação,
+                mas também facilitar e demonstrar para que incetive e inspire outros agricultores.
+            </p>
+        </div>
+        <div class="content__rigth">
+            <h3 class="section__title">
+                Já Realizamos
+            </h3>
+            <p class="section__body">
+                Nós do grupo EcoTerra realizamos em nosso site entrevistas com os agricultores da
+                asssociação onde os próprios falam sobre as dificuldades que tem um agricultor agroecologico
+                e também dão dicas do seu dia a dia, onde tudo é visto e feito de forma prática e mais
+                acessivel.
+            </p>
+        </div>
+    </div>
+</section>
+{% endblock content %}

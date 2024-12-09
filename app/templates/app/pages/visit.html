@@ -1,0 +1,143 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EcoTerra - Visita 1</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="../assets/css/base.css">
+
+    <!-- FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <style>
+
+        .image__small {
+            width: 100%;
+            max-width: 300px;
+            height: 100%;
+            object-fit: cover;
+        }
+
+
+        .grid__visit {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-gap: 1rem;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <img src="..\assets\images\Agriculture Nature Logo 4.png" alt="Logo">
+        <nav class="nav">
+            <ul class="links">
+                <li>
+                    <a class="link" href="/">Início</a>
+                    <a class="link" href="about.html">Sobre nós</a>
+                    <a class="link" href="login.html">Login</a>
+                    <a class="btn" href="register.html">Cadastre-se</a>
+                </li>
+            </ul>
+            <a href="javascript:void(0);" class="menu__icon" onclick="toggleMenu()">
+                <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd"
+                        d="M1 2.5A.5.5 0 0 1 1.5 2h13a.5.5 0 0 1
+                        .5.5v1a.5.5 0 0 1-.5.5h-13a.5.5 0 0
+                        1-.5-.5v-1zm0 4A.5.5 0 0 1 1.5 6h13a.5.5
+                        0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-13a.5.5
+                        0 0 1-.5-.5v-1zm0 4A.5.5 0 0 1 1.5
+                        10h13a.5.5 0 0 1 .5.5v1a.5.5 0 0
+                        1-.5.5h-13a.5.5 0 0 1-.5-.5v-1z" />
+                </svg>
+            </a>
+        </nav>
+    </header> 
+    <main>
+        <div class="margin__bottom--40">
+            <img id="imagem_group" style="max-width: 100%;" src="../assets/images/aula_de_campo2.png" alt="Imagem">
+        </div>
+        <section class="content">
+            <div class="content__item">
+                <div class="content__left align__center">
+                    <h1 class="section__title center">Visita à propriedade de Romildo, agricultor agroecológico e membro da associação, em São Miguel - RN</h1>
+                    <p class="section__body">  
+                        Em 06 de julho, realizamos uma visita às plantações dos agricultores 
+                        agroecológicos na cidade de São Miguel. Durante essa visita, tivemos a oportunidade de entender 
+                        melhor os princípios da agroecologia e conhecer de perto o trabalho desenvolvido pelos 
+                        agricultores nesse contexto. <br>
+                        &nbsp 
+                        Ao conversar com os agricultores, foi possível aprender sobre suas 
+                        práticas sustentáveis e métodos de cultivo que visam preservar o equilíbrio ambiental e 
+                        promover a produção de alimentos saudáveis. A visita proporcionou muita experiência, nos permitindo 
+                        conhecer um pouco mais sobre a importância da agricultura agroecológica e seu impacto positivo 
+                        no meio ambiente e na sociedade.
+                    </p>
+                    <div class="section__divider"></div>
+                    <!-- <p id="paragrafo" class="section__body"> Ele também cita as dificuldades enfrentadas na produção agroecologica por conta do grande trabalho manual e a concorrência com as grandes redes de comércio/ mercado, o que os confortam diante as dificuldades é o apoio de alguns órgãos como o IFRN onde possibilita a realização da feirinha orgânica. Seu Romildo, também nos apresenta algumas técnicas agrícolas onde tudo é aproveitado na sua prioridade agroecológica;  as folhas de bananeira por exemplo, são usadas como lenços para as tapiocas recheadas e o talo da folha do mamão usado como canudo.</p> -->
+                </div>
+                <div class="content__rigth align__center">
+                    <img class="sub_imagem image__small" src="..\assets\images\aula_de_campo3.png" alt="imagem">
+                    <div class="section__divider"></div>
+                    <p class="section__body"> 
+                        Na entrevista com o agricultor da associação,  Seu Romildo, é citado a importância e o que a agroecologia significa para o mesmo. 
+                        "Aqui temos graviolas e eu prefiro perder as graviolas do que realizada a colheita das frutas intoxicadas". <br> 
+                        &nbsp
+                        Foi feita também, uma caminhada para ser apresentada a diversidade da flora presente na propriedade. Ele também 
+                        relata como é comum as propriedades que usam agrotóxicos produzirem os mesmo tipos vegetativos, o que não ocorre em sua 
+                        propriedade onde temos uma grande diversidade vegetal.
+                    </p>
+                </div>
+            </div>
+
+            <div class="content__item margin__top--20">
+                <div class="content__left align__center">
+                    <p class="section__body">
+                          Ele também cita as dificuldades enfrentadas na produção agroecologica por conta do grande trabalho manual 
+                          e a concorrência com as grandes redes de comércio/ mercado, o que os confortam diante as dificuldades é o 
+                          apoio de alguns órgãos como o IFRN onde possibilita a realização da feirinha orgânica. Seu Romildo, 
+                          também nos apresenta algumas técnicas agrícolas onde tudo é aproveitado na sua prioridade agroecológica;  
+                          as folhas de bananeira por exemplo, são usadas como lenços para as tapiocas recheadas e o talo da 
+                          folha do mamão usado como canudo.
+                    </p>
+                </div>
+                <div class="content__rigth align__center">
+                    <div class="grid__visit">
+                        <img class="sub_imagem" src="..\assets\images\visit\amendoim.png" alt="imagem">
+                        <img class="sub_imagem" src="..\assets\images\visit\coco.png" alt="imagem">
+                        <img class="sub_imagem" src="..\assets\images\visit\pimenta.png" alt="imagem">
+                        <img class="sub_imagem" src="..\assets\images\visit\banana.png" alt="imagem">
+                    </div> 
+                </div>
+            </div>
+
+            <div class="margin__top--40">
+                <a href="/pages/second_visit.html"">
+                    <button class="btn">Saiba mais >
+                    </button>
+                </a>
+            </div>
+        </section>
+    </main>
+        <footer class="section_footer margin__top--40">
+        <div class="social_media">
+            <img class="social_media_logo" src="..\assets\images\icons8-facebook-480 1.png" alt="logo facebook">
+            <img class="social_media_logo" src="..\assets\images\icons8-gmail-240 1.png" alt="logo gmail">
+            <img class="social_media_logo" src="..\assets\images\icons8-instagram-240 1.png" alt="logo instagram">
+        </div>
+        <p class="text_footer"> BR-405 S/N, Pau dos Ferros - RN, 59900-000, Brasil </p>
+        <div id="email" class="text_footer">
+            <div>
+                <img src="..\assets\images\icons8-carta-96 1.png" alt="ícone email">
+            </div>
+            <p id="email_text">ecoterra@gmail.com</p>
+        </div>
+        <p id="ecoterra" class="text_footer" >© 2023 EcoTerra </p>
+    </footer>
+</body>

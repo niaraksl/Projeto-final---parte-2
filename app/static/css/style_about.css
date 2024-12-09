@@ -1,0 +1,164 @@
+/* Configuração inicial*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Inter;
+    font-style: normal; 
+}
+
+/* Header */
+
+header {
+    display: flex;
+    background: #E1E8CB;
+    height: 6.5rem; 
+    align-items: center;
+    justify-content: space-between;
+}
+
+nav {
+    padding: 3rem;
+}
+
+.links {
+    color: #2F9D1D;
+    margin-right: 1rem;
+
+}
+
+ul {
+    list-style: none;
+
+}
+
+a {
+    font-size: 15px; 
+    text-decoration: none;
+;
+}
+
+.cadastro_button {
+    margin-left: 0.7rem;
+    color: #FFFFFFCC;
+    padding: 0.5rem 0.9rem;
+    background-color: #2F9D1D;
+    border-radius: 1rem;
+    font-weight: 600;
+}
+
+/* Main */
+
+body {
+    background-color: #FFF4E8;
+}
+
+#imagem_group {
+    width: 100%;
+}
+
+.section {
+    display: flex;
+    margin-bottom: 5rem;
+    justify-content: space-evenly;
+}
+
+.left {
+    margin-right: 12rem;
+}
+
+.right {
+    margin-left: 12rem;
+}
+
+.title {
+    font-size: 3rem;
+    font-weight: 400;
+    color: #DC7E00;
+
+}
+
+/* .container {
+    margin: 5rem;
+} */
+
+.sub_imagem {
+    width: 30rem;
+}
+
+.destaque {
+    color: #2F9D1D;
+}
+
+.text {
+    margin-top: 1rem;
+    font-weight: 300;
+    font-size: 1rem;
+}
+
+.line {
+    border-bottom: 0.2rem solid #2F9D1D;
+    margin: 2rem 0;
+    margin-top: 5rem;
+    
+}
+
+/* Parceiros */
+
+#parceiros {
+    text-align: center;
+}
+
+.section_parceiros {
+display: flex;
+align-items: center;
+justify-content: center;
+
+}
+
+.logo_parceiro {
+    margin: 2rem;
+}
+
+/* FOOTER */
+
+.social_media {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 0.5rem;
+}
+
+.social_media_logo {
+    margin: 0.2rem;
+    padding: 0.5rem;
+    background-color: #FFF;;
+    border-radius: 3rem;
+}
+
+#email {
+    display: flex;
+    align-items: center;
+}
+
+#email_text {
+    margin-inline: 0.3rem;
+}
+
+.section_footer {
+    padding: 1.5rem;
+    color: #FFF;
+    background-color: #8E5721;
+    font-size: 0.8rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.text_footer {
+    margin: 0.5rem;
+}
+
+#ecoterra {
+    opacity: 60%;
+}

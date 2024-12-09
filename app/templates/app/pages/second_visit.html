@@ -1,0 +1,54 @@
+{% extends "app/base1.html" %}
+{% load static %}
+{% block styles %}
+.section__content {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 5rem;
+    gap: 2rem;
+}
+
+.sub_imagem {
+    margin-bottom: 2rem;
+}
+
+.image__wrapper {
+    padding: 1rem 0;
+    border-bottom: 0.2rem solid #2F9D1D;
+}
+{% endblock styles %}
+{% block content %}
+<div class="content__item">
+    <div class="image__wrapper">
+        <img class="sub_imagem content__item-rigth" src="{% static "img\second_visit\image2.png" %}" alt="imagem">
+    </div>
+    <h1 class="section__title content__item-left">Visita à propriedade de Romildo, agricultor agroecológico e membro da associação, em São Miguel - RN</h1>
+</div>
+<section class="section__content">
+    <p class="section__body">
+        Na entrevista com o pai de um dos agricultores e o dono da associação, ele compartilha sobre sua jornada na agroecologia, 
+        destacando os desafios enfrentados desde o início e os métodos de produção. Ele menciona: "Desde 1983, iniciei incentivado por um amigo,
+        um padre. Naquela época, muitas crianças morriam desnutridas. O padre voltou à sua terra natal e trouxe um projeto para a ACP 
+        (Ação Comunitária Paroquial). Naquele tempo, adquiriu cabras para doar a famílias carentes, proporcionando leite para as crianças. 
+        Introduziu alimentos como cascas e folhas de macaxeira, folhas de batata-doce, cascas de ovo e sementes de jerimum."
+        Ele continua relatando: "Comecei a trabalhar conosco, tornando-me agricultor da igreja, envolvido nas hortas comunitárias. 
+        Há alguns anos, meu filho também se envolveu, reunindo a família. Conseguimos estabelecer uma feira através do CAPA, onde a 
+        prefeitura municipal destinou uma rua para a feira ecológica, com produtos orgânicos e artesanatos." Ele enfatiza: "Para uma produção 
+        bem-sucedida, é essencial cultivar com amor."
+    </p>
+
+    <div class="section__divider"></div>
+
+    <img src="{% static "img\second_visit\image1.png" %}" alt="imagem">
+
+        <p class="section__body">
+            Os maiores desafios enfrentados são a dificuldade no comércio e a disparidade. Apesar de nossos produtos serem de alta qualidade, superando as vantagens dos produtos químicos, o mercado valoriza mais a aparência e os preços são muito desiguais. Enquanto quem trabalha com métodos convencionais está preocupado apenas com a produção, não com a qualidade, nós nos dedicamos ao cultivo natural, sem o uso de produtos químicos.
+            Utilizamos insumos provenientes de nossa própria agricultura, sendo desafiador encontrar sementes apropriadas. A fiscalização é rigorosa, e os pequenos agricultores como nós frequentemente enfrentam dificuldades, já que somos frágeis e carentes de apoio, levando muitos a desistir por falta de oportunidades.
+            Quanto ao processo de produção, começamos com a aragem, seguida da destorroação (umidecimento com água se o solo estiver compacto). Adubamos com compostagem e empregamos uma técnica de adubação chamada "masserado". Também utilizamos nitrogênio (adubação verde), que substitui esterco. Tudo isso é realizado a partir do quinto dia. A composição inclui rapadura, garapa de cana-de-açúcar, esterco de curral e capim verde triturado. Utilizamos a rapadura quebrada para neutralizar o odor, substituindo gradualmente componentes sem recorrer ao adubo químico.
+        </p>
+
+</section>
+{% endblock content %}

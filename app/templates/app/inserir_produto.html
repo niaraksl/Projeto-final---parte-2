@@ -1,17 +1,17 @@
-{% extends "app/base.html" %}
+{% extends "app/base1.html" %}
 {% load static %}
 {% block title %}Cadastrar produto{% endblock title %}
 {% block content %}
-<h1 class="text-secondary mt-3">Inserir Produto</h1>
-<section class="row justify-content-center">
-    <form action="" method="post" class="mt-4" id="form">
-        {% csrf_token %}
-        <label for="" class="form-label">Nome do Produto</label>
-        {{ form.as_p }}
-        {% comment %} <input type="text" name="nome_produto" id="nome_produto" class="form-control mb-4" placeholder="Ex: Banana" value=""> {% endcomment %}
-        <div class="mb-4 d-flex justify-content-end">
-            <button type="submit" class="btn btn-lg btn-primary">Cadastrar</button>
-        </div>
-    </form>
-</section>
+<div class="container vh-100">
+    <h1 class="text-secondary mt-3">Inserir Produto</h1>
+    <section class="row justify-content-center">
+        <form action="" method="post" class="mt-4 col-6" id="form">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <div class="mb-4 d-flex justify-content-end">
+                <button type="submit" class="btn btn-lg btn-success">Cadastrar</button>
+            </div>
+        </form>
+    </section>
+</div>
 {% endblock content %}
